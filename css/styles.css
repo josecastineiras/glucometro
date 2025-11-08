@@ -1,0 +1,148 @@
+ /* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* NAVEGACIÓN (HEADER) */
+.main-header {
+    background: #007bff; /* Azul primario, profesional y de salud */
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8em;
+    margin-left: 20px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.main-nav ul li a:hover {
+    background: #0056b3;
+}
+
+/* SECCIONES DE CONTENIDO */
+.content-section {
+    padding: 60px 0;
+}
+
+.grey-bg {
+    background-color: #e9ecef; /* Un fondo sutil para contraste */
+}
+
+h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* SECCIÓN HERO (INICIO) */
+.hero-section {
+    background: url('hero-bg.jpg') no-repeat center center/cover; /* Reemplazar con una imagen propia */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #333; /* Color de fallback */
+}
+
+.hero-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.cta-button {
+    background: #28a745; /* Verde para la acción */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* LAYOUT DE GRIDS (para tecnología) */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas por defecto */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* GRÁFICOS */
+.chart-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* PIE DE PÁGINA (FOOTER) */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+}
+
+/* MEDIA QUERIES (Responsividad) */
+@media (max-width: 768px) {
+    /* Ajustes para pantallas más pequeñas (tablets y móviles) */
+    .main-nav ul {
+        flex-direction: column; /* La navegación se apila */
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    .main-nav ul li a {
+        padding: 8px 15px;
+        text-align: center;
+    }
+
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .logo h1 {
+        margin: 10px 20px;
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+    }
+}
